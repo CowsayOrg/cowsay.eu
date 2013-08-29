@@ -114,22 +114,23 @@ body .body .chat-container .chat .chat-body .message:last-child {
 
 /* line 36 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat .chat-body .message .author {
-  width: 10%;
+  width: 15%;
+  color: #046380;
   float: left;
   overflow: hidden;
 }
 
-/* line 40 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 41 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat .chat-body .message .text {
   overflow: hidden;
 }
 
-/* line 42 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 43 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat .chat-input {
   height: 30px;
 }
 
-/* line 44 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 45 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat .chat-input form {
   display: block;
   margin: 4px 100px 0 0;
@@ -137,7 +138,7 @@ body .body .chat-container .chat .chat-input form {
   position: relative;
 }
 
-/* line 49 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 50 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat .chat-input input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -147,7 +148,7 @@ body .body .chat-container .chat .chat-input input {
   line-height: 20px;
 }
 
-/* line 54 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 55 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat .chat-input button {
   position: absolute;
   top: 0;
@@ -156,7 +157,7 @@ body .body .chat-container .chat .chat-input button {
   height: 26px;
 }
 
-/* line 59 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 60 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .feed {
   float: left;
   width: 300px;
@@ -167,18 +168,18 @@ body .body .feed {
   overflow-y: auto;
 }
 
-/* line 67 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 68 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .feed .message {
   padding: 5px;
 }
 
-/* line 69 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 70 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .feed .message .timestamp {
   width: 50px;
   float: left;
 }
 
-/* line 72 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 73 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .feed .message .text {
   overflow: hidden;
 }

@@ -5,7 +5,7 @@ io = require('socket.io').listen(1337);
 messages = [];
 
 generate_name = function(ip) {
-  return 'cowsayShow';
+  return console.log("generating name for " + ip.slice(-6));
 };
 
 name = function(socket) {
@@ -13,6 +13,7 @@ name = function(socket) {
 };
 
 io.sockets.on('connection', function(socket) {
+  socket.emit('history', messages);
   socket.on('msg', function(data) {
     var obj;
     console.log("Received message: " + data.msg + " from " + (name(socket)));
