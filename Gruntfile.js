@@ -75,8 +75,14 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= fruit.src %>/js',
-          src: '*.coffee',
+          src: '*.public.coffee',
           dest: '<%= fruit.mockup %>/js',
+          ext: '.js'
+        }, {
+          expand: true,
+          cwd: '<%= fruit.src %>/js',
+          src: '*.server.coffee',
+          dest: '.',
           ext: '.js'
         }]
       },
@@ -88,8 +94,14 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= fruit.src %>/js',
-          src: '*.coffee',
+          src: '*.public.coffee',
           dest: '<%= fruit.mockup %>/js',
+          ext: '.js'
+        }, {
+          expand: true,
+          cwd: '<%= fruit.src %>/js',
+          src: '*.server.coffee',
+          dest: '.',
           ext: '.js'
         }]
       }
