@@ -1,26 +1,29 @@
-var messages;
+var generate_name, io, messages, name;
+
+io = require('socket.io').listen(1337);
 
 messages = [];
 
-io.sockets.on('connection', function() {
+generate_name = function(ip) {
+  return 'cowsayShow';
+};
+
+name = function(socket) {
+  return generate_name(socket.handshake.address.address);
+};
+
+io.sockets.on('connection', function(socket) {
   socket.on('msg', function(data) {
-    return messages.push({
-      msg: data.msg,
-      author: data.author
-    });
+    var obj;
+    console.log("Received message: " + data.msg + " from " + (name(socket)));
+    obj = {
+      text: data.msg,
+      author: name(socket)
+    };
+    messages.push(obj);
+    return io.sockets.emit('msg', obj);
   });
-  io.sockets.emit('msg', data);
-  return socket.on('connect', function(data) {
-    var address, name;
-    address = socket.handshake.address;
-    name = generate_name(address.address);
-    socket.emit('user', {
-      name: name
-    });
-    return socket.emit('history', {
-      history: messages
-    });
-  });
+  return socket.on('connect', function(data) {});
 });
 
 /*

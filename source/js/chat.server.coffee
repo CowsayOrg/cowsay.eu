@@ -1,18 +1,25 @@
+io = require('socket.io').listen(1337)
 messages = []
 
-io.sockets.on 'connection', ->
-  socket.on 'msg', (data) ->
-    messages.push
-      msg: data.msg
-      author: data.author
+generate_name = (ip) ->
+  'cowsayShow'
 
-  io.sockets.emit('msg', data)
+name = (socket) ->
+  generate_name socket.handshake.address.address
+
+io.sockets.on 'connection', (socket) ->
+  socket.on 'msg', (data) ->
+    console.log "Received message: #{data.msg} from #{name(socket)}"
+    obj =
+      text: data.msg
+      author: name(socket)
+
+    messages.push obj
+
+    io.sockets.emit('msg', obj)
 
   socket.on 'connect', (data) ->
-    address = socket.handshake.address
-    name = generate_name address.address
 
-    socket.emit 'user',    name: name
-    socket.emit 'history', history: messages
+    #socket.emit 'history', history: messages
 
 
