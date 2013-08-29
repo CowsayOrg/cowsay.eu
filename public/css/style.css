@@ -1,3 +1,21 @@
+.clearfix{zoom:1}
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both}
+body{font-size:14px;}
+body header{background:#c8b7b7;border:1px solid #888;margin:10px;}
+body header #logo{width:215px;height:149px;float:right;margin:20px}
 body .body .chat-container{float:left;width:100%;}
-body .body .chat-container .chat{margin:0 300px 0 0}
-body .body .feed{float:left;width:300px;margin:0 0 0 -300px}
+body .body .chat-container .chat{margin:0 320px 10px 10px;}
+body .body .chat-container .chat .chat-body{overflow-x:hidden;overflow-y:auto;height:270px;background:#c8b7b7;}
+body .body .chat-container .chat .chat-body .message{padding:3px 5px;border-bottom:1px solid #000;}
+body .body .chat-container .chat .chat-body .message:last-child{border-bottom:0}
+body .body .chat-container .chat .chat-body .message .author{width:10%;float:left;overflow:hidden}
+body .body .chat-container .chat .chat-body .message .text{overflow:hidden}
+body .body .chat-container .chat .chat-input{height:30px;}
+body .body .chat-container .chat .chat-input form{display:block;margin:4px 100px 0 0;padding:0;position:relative}
+body .body .chat-container .chat .chat-input input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;font-size:16px;line-height:20px}
+body .body .chat-container .chat .chat-input button{position:absolute;top:0;right:-100px;width:100px;height:26px}
+body .body .feed{float:left;width:300px;height:300px;background:#c8b7b7;margin:0 10px 10px -310px;overflow-x:hidden;overflow-y:auto;}
+body .body .feed .message{padding:5px;}
+body .body .feed .message .timestamp{width:50px;float:left}
+body .body .feed .message .text{overflow:hidden}
