@@ -1,16 +1,73 @@
+@import "nib"
+
+.clearfix
+  clearfix()
+
+$brown = #c8b7b7
+
 body
+  font-size 14px
   header
+    background $brown
+    border 1px solid #888
+    margin 10px
     #player
       //
     #logo
-      //
+      size 215px 149px
+      float right
+      margin 20px
   .body
     .chat-container
       float left
       width 100%
       .chat
-        margin 0 300px 0 0
+        margin 0 320px 10px 10px
+        .chat-body
+          overflow-x hidden
+          overflow-y auto
+          height 270px
+          background $brown
+          .message
+            padding 3px 5px
+            border-bottom 1px solid black
+            &:last-child
+              border-bottom 0
+            .author
+              width 10%
+              float left
+              overflow hidden
+            .text
+              overflow hidden
+        .chat-input
+          height 30px
+          form
+            display block
+            margin 4px 100px 0 0
+            padding 0
+            position relative
+          input
+            box-sizing border-box
+            width 100%
+            font-size 16px
+            line-height 20px
+          button
+            position: absolute
+            top 0
+            right -100px
+            size 100px 26px
     .feed
       float left
       width 300px
-      margin 0 0 0 -300px
+      height 300px
+      background $brown
+      margin 0 10px 10px -310px
+      overflow-x hidden
+      overflow-y auto
+      .message
+        padding 5px
+        .timestamp
+          width 50px
+          float left
+        .text
+          overflow hidden

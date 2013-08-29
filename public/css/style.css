@@ -1,30 +1,184 @@
 
 /* line 1 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
-/* line 1 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 14 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/index.styl */
 
-/* line 2 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/border.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 6 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/flex.styl */
+
+/* line 154 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 154 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/config.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/image.styl */
+
+/* line 25 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 3 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/positions.styl */
+
+/* line 3 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/reset.styl */
+
+/* line 5 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 11 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 557 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 557 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/config.styl */
+
+/* line 12 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/size.styl */
 
 /* line 3 : /home/cow/cowsay-web/app/source/css/style.styl */
+.clearfix {
+  zoom: 1;
+}
 
-/* line 5 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 23 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/clearfix.styl */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
 
-/* line 7 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 27 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/nib/lib/nib/clearfix.styl */
+.clearfix:after {
+  clear: both;
+}
 
 /* line 8 : /home/cow/cowsay-web/app/source/css/style.styl */
+body {
+  font-size: 14px;
+}
+
+/* line 10 : /home/cow/cowsay-web/app/source/css/style.styl */
+body header {
+  background: #c8b7b7;
+  border: 1px solid #888;
+  margin: 10px;
+}
+
+/* line 14 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 16 : /home/cow/cowsay-web/app/source/css/style.styl */
+body header #logo {
+  width: 215px;
+  height: 149px;
+  float: right;
+  margin: 20px;
+}
+
+/* line 20 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 21 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container {
   float: left;
   width: 100%;
 }
 
-/* line 11 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 24 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .chat-container .chat {
-  margin: 0 300px 0 0;
+  margin: 0 320px 10px 10px;
 }
 
-/* line 13 : /home/cow/cowsay-web/app/source/css/style.styl */
+/* line 26 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 270px;
+  background: #c8b7b7;
+}
+
+/* line 31 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-body .message {
+  padding: 3px 5px;
+  border-bottom: 1px solid #000;
+}
+
+/* line 34 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-body .message:last-child {
+  border-bottom: 0;
+}
+
+/* line 36 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-body .message .author {
+  width: 10%;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 40 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-body .message .text {
+  overflow: hidden;
+}
+
+/* line 42 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-input {
+  height: 30px;
+}
+
+/* line 44 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-input form {
+  display: block;
+  margin: 4px 100px 0 0;
+  padding: 0;
+  position: relative;
+}
+
+/* line 49 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-input input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* line 54 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat .chat-input button {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 100px;
+  height: 26px;
+}
+
+/* line 59 : /home/cow/cowsay-web/app/source/css/style.styl */
 body .body .feed {
   float: left;
   width: 300px;
-  margin: 0 0 0 -300px;
+  height: 300px;
+  background: #c8b7b7;
+  margin: 0 10px 10px -310px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 67 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .feed .message {
+  padding: 5px;
+}
+
+/* line 69 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .feed .message .timestamp {
+  width: 50px;
+  float: left;
+}
+
+/* line 72 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .feed .message .text {
+  overflow: hidden;
 }
