@@ -85,9 +85,13 @@ module.exports = function(grunt) {
           bare: true,
           join: true
         },
-        files: {
-          '<%= fruit.mockup %>/js/script.js': '<%= fruit.src %>/js/*.coffee' // concat then compile into single file
-        }
+        files: [{
+          expand: true,
+          cwd: '<%= fruit.src %>/js',
+          src: '*.coffee',
+          dest: '<%= fruit.mockup %>/js',
+          ext: '.js'
+        }]
       }
     },
     clean: {
