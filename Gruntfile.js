@@ -108,7 +108,7 @@ module.exports = function(grunt) {
     },
     clean: {
       production: {
-        src: ['<%= fruit.mockup %>/js/*.map']
+        src: ['<%= fruit.mockup %>/js/*.map', '*.map']
       }
     }
   });

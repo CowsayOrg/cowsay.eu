@@ -10,19 +10,52 @@
     <meta name="description" content="Cowsay Show">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="public/css/normalize.css">
-    <link rel="stylesheet" href="public/css/style.css">
-    <script src="public/js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
+    <header>
+      <div id="player"></div>
+      <div id="logo">
+        <a href="http://cowsay.eu"><img src="img/logo-cowsay-show.png" alt="Cowsay Show Logo" /></a>
+      </div>
+    </header>
+    <div class="body">
+      <div class="chat-container">
+        <div class="chat" id="chat">
+          <div class="chat-body" id="chat-body">
+            <div class="message">
+              <div class="author">bumbu</div>
+              <div class="text">This is horosho</div>
+            </div>
+            <div class="message">
+              <div class="author">bumbu</div>
+              <div class="text">This is horosho</div>
+            </div>
+          </div>
+          <div class="chat-input" id="chat-input">
+            <form action="">
+              <input type="text" name="message" />
+              <button>submit</button>
+            </form>
+          </div>
+          chat
+        </div>
+      </div>
+      <div class="feed">
+        feed
+      </div>
+    </div>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
-    <script src="js/stript.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/chat.js"></script>
 
     <script>

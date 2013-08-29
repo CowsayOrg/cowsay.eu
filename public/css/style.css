@@ -1,1 +1,3 @@
-body{background:#008000}
+body .body .chat-container{float:left;width:100%;}
+body .body .chat-container .chat{margin:0 300px 0 0}
+body .body .feed{float:left;width:300px;margin:0 0 0 -300px}
