@@ -1,0 +1,13 @@
+{
+  "name": "cowsay.eu",
+  "description": "Cowsay Show website",
+  "version": "0.0.1",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CowsayShow/cowsay.eu.git"
+  },
+  "dependencies": {
+    "express": "3.x"
+  }
+}
