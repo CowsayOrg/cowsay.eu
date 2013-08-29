@@ -4,13 +4,13 @@ class Chat
   add_message: (author, text) ->
     message_str = "<div class='message'><div class='author'>#{author}</div>" +
                   "<div class='text'>#{text}</div></div>"
-    $('.chat-body').append message_str
+    $('.chat-body').append message_str unless /</i.test(text)
     #$('.chat-body').animate({ scrollTop: $('.chat-body').height()}, 300)
 
   clear: ->
     $('.chat-body').html ''
   send_message: (text) ->
-    unless text.length == 0
+    unless text.length == 0 or /</i.test(text)
       @socket.emit 'msg', msg: text
       $('#chat-input input').val('')
 

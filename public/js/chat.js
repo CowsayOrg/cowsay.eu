@@ -8,7 +8,9 @@ Chat = (function() {
   Chat.prototype.add_message = function(author, text) {
     var message_str;
     message_str = ("<div class='message'><div class='author'>" + author + "</div>") + ("<div class='text'>" + text + "</div></div>");
-    return $('.chat-body').append(message_str);
+    if (!/</i.test(text)) {
+      return $('.chat-body').append(message_str);
+    }
   };
 
   Chat.prototype.clear = function() {
@@ -16,7 +18,7 @@ Chat = (function() {
   };
 
   Chat.prototype.send_message = function(text) {
-    if (text.length !== 0) {
+    if (!(text.length === 0 || /</i.test(text))) {
       this.socket.emit('msg', {
         msg: text
       });

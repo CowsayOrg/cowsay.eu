@@ -11,7 +11,7 @@ body .body .chat-container .chat .chat-body{overflow-x:hidden;overflow-y:auto;he
 body .body .chat-container .chat .chat-body .message{padding:3px 5px;border-bottom:1px solid #000;}
 body .body .chat-container .chat .chat-body .message:last-child{border-bottom:0}
 body .body .chat-container .chat .chat-body .message .author{width:15%;color:#046380;float:left;overflow:hidden}
-body .body .chat-container .chat .chat-body .message .text{overflow:hidden}
+body .body .chat-container .chat .chat-body .message .text{min-height:15px;overflow:hidden}
 body .body .chat-container .chat .chat-input{height:30px;}
 body .body .chat-container .chat .chat-input form{display:block;margin:4px 100px 0 0;padding:0;position:relative}
 body .body .chat-container .chat .chat-input input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;font-size:16px;line-height:20px}
