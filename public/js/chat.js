@@ -8,11 +8,7 @@ Chat = (function() {
   Chat.prototype.add_message = function(author, text) {
     var message_str;
     message_str = ("<div class='message'><div class='author'>" + author + "</div>") + ("<div class='text'>" + text + "</div></div>");
-    $('.chat-body').append(message_str);
-    $('.chat-body').animate({
-      scrollTop: $('.chat-body').height()
-    }, 300);
-    return $('#chat-input input').val('');
+    return $('.chat-body').append(message_str);
   };
 
   Chat.prototype.clear = function() {
@@ -20,9 +16,12 @@ Chat = (function() {
   };
 
   Chat.prototype.send_message = function(text) {
-    return this.socket.emit('msg', {
-      msg: text
-    });
+    if (text.length !== 0) {
+      this.socket.emit('msg', {
+        msg: text
+      });
+      return $('#chat-input input').val('');
+    }
   };
 
   Chat.prototype.handle_messages = function() {
@@ -30,9 +29,8 @@ Chat = (function() {
     this.socket.on('msg', function(data) {
       return _this.add_message(data.author, data.text);
     });
-    return this.socket.on('history', function(data) {
+    this.socket.on('history', function(data) {
       var msg, _i, _len, _results;
-      console.log(data);
       _results = [];
       for (_i = 0, _len = data.length; _i < _len; _i++) {
         msg = data[_i];
@@ -40,7 +38,12 @@ Chat = (function() {
       }
       return _results;
     });
+    return this.socket.on('count', function(data) {
+      return _this.set_count(data.count);
+    });
   };
+
+  Chat.prototype.set_count = function(count) {};
 
   return Chat;
 
@@ -59,7 +62,3 @@ $(function() {
   });
   return chat.handle_messages();
 });
-
-/*
-//@ sourceMappingURL=chat.js.map
-*/

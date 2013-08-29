@@ -16,8 +16,4 @@ app.get('/', function(req, res) {
   return res.render('index.html');
 });
 
-app.listen(8080);
-
-/*
-//@ sourceMappingURL=app.js.map
-*/
+app.listen(80);

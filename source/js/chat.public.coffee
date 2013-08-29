@@ -5,21 +5,27 @@ class Chat
     message_str = "<div class='message'><div class='author'>#{author}</div>" +
                   "<div class='text'>#{text}</div></div>"
     $('.chat-body').append message_str
-    $('.chat-body').animate({ scrollTop: $('.chat-body').height()}, 300)
-    $('#chat-input input').val('')
+    #$('.chat-body').animate({ scrollTop: $('.chat-body').height()}, 300)
 
   clear: ->
     $('.chat-body').html ''
   send_message: (text) ->
-    @socket.emit 'msg', msg: text
+    unless text.length == 0
+      @socket.emit 'msg', msg: text
+      $('#chat-input input').val('')
 
   handle_messages: ->
     @socket.on 'msg', (data) =>
       @add_message(data.author, data.text)
     @socket.on 'history', (data) =>
-      console.log data
       for msg in data
         @add_message(msg.author, msg.text)
+    @socket.on 'count', (data) =>
+      @set_count(data.count)
+
+  set_count: (count) ->
+    #$('.user-count').text("Users: #{count}")
+
 
 $ ->
   chat = new Chat()
