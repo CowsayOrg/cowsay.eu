@@ -1,3 +1,30 @@
-body .body .chat-container{float:left;width:100%;}
-body .body .chat-container .chat{margin:0 300px 0 0}
-body .body .feed{float:left;width:300px;margin:0 0 0 -300px}
+
+/* line 1 : /home/cow/cowsay-web/app/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 2 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 3 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 5 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 7 : /home/cow/cowsay-web/app/source/css/style.styl */
+
+/* line 8 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container {
+  float: left;
+  width: 100%;
+}
+
+/* line 11 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .chat-container .chat {
+  margin: 0 300px 0 0;
+}
+
+/* line 13 : /home/cow/cowsay-web/app/source/css/style.styl */
+body .body .feed {
+  float: left;
+  width: 300px;
+  margin: 0 0 0 -300px;
+}
