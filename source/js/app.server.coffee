@@ -1,4 +1,6 @@
 express = require 'express'
+require './chat'
+
 app = express()
 
 app.set('views', __dirname + '/views')
